@@ -1,16 +1,21 @@
 {
-	"name": "Signup",
-	"description": "Gloggmail signup form",
-	"questions": [
-		{
+    "name": "mail.gloggers.net signup",
+    "description": "gloggmail signup form",
+    "questions": [
+        {
             "id": "name",
-			"question": "What is your name?",
+            "question": "What is your name? (first and last)",
             "type": "text"
-		},
+        },
+        {
+            "id": "reason",
+            "question": "What reason do you want a gloggers.net email? (ex: personal use, work)",
+            "type": "text"
+        },
         {
             "id": "username",
-            "question": "What do you want your username to be? (must be all lowercase and no spaces or special characters except numbers)",
+            "question": "What do you want your username to be? (______@gloggers.net)",
             "type": "text"
         }
-	]
+    ]
 }

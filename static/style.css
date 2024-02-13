@@ -14,7 +14,7 @@ html * {
 }
 
 #watermark {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
 }
 

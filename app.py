@@ -18,7 +18,7 @@ def submit(formname):
 
     content=f"Response for form \"{json_file["name"]}\":\n\n";
     for question in json_file["questions"]:
-        content += (question["question"] + ":\n\n" + request.form[question["id"]] + "\n\n");
+        content += (question["question"] + ":\n\n\t" + request.form[question["id"]] + "\n\n");
 
     send_form_email(sender=os.getenv("BOT_ADDRESS"),
                     recipient=os.getenv("RECIPIENT_ADDRESS"),
