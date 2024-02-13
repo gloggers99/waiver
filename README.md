@@ -6,6 +6,17 @@
 
 As long as you have python (preferrably 3.1X) and flask (`pip install flask`) installed, and you have followed the email routing setup below, all you need to do is run the following command in the same directory as `app.py`: `flask run`. for debug mode, just run the command with the `--debug` flag appended. ex: `flask run --debug`
 
+## dependencies
+
+- python 3.1X
+- flask (for webserver)
+- dominate (for python html)
+- dotenv (loading up .env file)
+
+quick install:
+
+`pip3 install flask dominate python-dotenv`
+
 ## email routing setup
 
 Waiver routes responses to an admin provided email. In order to provide this email, you will need to either:
