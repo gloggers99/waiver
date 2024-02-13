@@ -1,0 +1,16 @@
+{
+	"name": "Signup",
+	"description": "Gloggmail signup form",
+	"questions": [
+		{
+            "id": "name",
+			"question": "What is your name?",
+            "type": "text"
+		},
+        {
+            "id": "username",
+            "question": "What do you want your username to be? (must be all lowercase and no spaces or special characters except numbers)",
+            "type": "text"
+        }
+	]
+}
