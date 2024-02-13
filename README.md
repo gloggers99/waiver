@@ -38,7 +38,7 @@ RECIPIENT_ADDRESS=recipient@your.email.server.com
 - [X] basic "waiver"/"form" viewing and responding
 - [X] the ability to create forms using a simple JSON file
 - [X] SSL encrypted email routing for form responses
-- [ ] input sanitization (top of priorities)
+- [X] input sanitization
 - [ ] interface to create forms
 - [ ] right & wrong (test like forms)
 - [ ] other forms of response routing

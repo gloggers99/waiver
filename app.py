@@ -1,7 +1,7 @@
 from flask import Flask, render_template_string, request;
 from pathlib import Path;
 from dominate.tags import *;
-import dominate, json, os;
+import dominate, json, os, html;
 from mail import send_form_email;
 from dotenv import load_dotenv;
 
@@ -18,7 +18,7 @@ def submit(formname):
 
     content=f"Response for form \"{json_file["name"]}\":\n\n";
     for question in json_file["questions"]:
-        content += (question["question"] + ":\n\n\t" + request.form[question["id"]] + "\n\n");
+        content += (question["question"] + ":\n\n\t" + html.escape(request.form[question["id"]]) + "\n\n");
 
     send_form_email(sender=os.getenv("BOT_ADDRESS"),
                     recipient=os.getenv("RECIPIENT_ADDRESS"),
