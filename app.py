@@ -6,6 +6,8 @@ from mail import send_form_email;
 from dotenv import load_dotenv;
 
 app = Flask(__name__)
+version = "waiver v0.1-alpha"
+
 
 load_dotenv();
 
@@ -43,14 +45,14 @@ def index(formname):
 
     with doc:
         with div():
-            attr(cls="header");
+            attr(id="header");
 
             h1(json_file["name"]);
             p(json_file["description"]);
 
 
         with div():
-            attr(cls="body");
+            attr(id="body");
 
             with form(enctype="multipart/form-data", method="post", action="/" + formname + "/submit"):
                 for question in json_file["questions"]:
@@ -58,8 +60,15 @@ def index(formname):
                         p(question["question"]);
                     if question["type"] == "text":
                         input_(id=question["id"], type="text", name=question["id"]);
+                    br();
+                    br();
                 br();
                 input_(type="submit", value="Submit");
+
+        with div():
+            attr(id="watermark");
+
+            small(p(f"made with waiver ({version})"));
 
     return render_template_string(doc.render());
 
